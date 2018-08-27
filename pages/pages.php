@@ -1,5 +1,5 @@
 <?php 
-include('../re-usable/head.php');
+require_once("../re_usable/head.html");
 
 //-- Header --
 echo '
@@ -28,8 +28,8 @@ echo'
         <div class="pagenation_links">
          <a href="index.php">Home</a>
          <i> / </i>';
-        if($page=='activities')
-          echo 'Activities';
+       // if($_GET['page']=='activities')
+       //   echo 'Activities';
        
         echo '</div>
       </div>
@@ -41,11 +41,11 @@ echo'
 
 //-- Content --
 
-        if($page=='home')
-          include("home.php");
-        if($page=='activities')
-          include("activities.php");
-        
-include('../re-usable/footer.php');
+      /*  if($_GET['page']=='home')
+          require_once("home.php");
+        if($_GET['page']=='activities')
+          require_once("activities.php"); */
+//-- END Content -->       
+require_once("../re_usable/footer.html");
 ?>
-<!-- END Content --> 
+
